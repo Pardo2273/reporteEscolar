@@ -6,18 +6,29 @@
     <title>Reporte Escolar</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!--con el onload apenas carga la pagina ya aparece cargada la funcion de mostrar Notas-->
+<body class="container" onload="mostrarNotas()">
+    <header>
+        <h1>Registro Estudiantil</h1>
+    </header>
     <main>
-        <!--para mostrar los resultados de las otras funciones-->
-        <p id="resultado"></p>
-
         <ul id="lista">
-            <!--falta implementar la funcion que le anade hijos a este ul-->
+            <!--la funcion que anade los hijos es la de mostrar las notas, esa se carga apenas inicia la pagina-->
         </ul>
-        <button class="botones" onclick="mostrarNotas()">Lista de Calificaciones</button>
-        <button class="botones" onclick="promedio()">Promedio</button>
-        <button class="botones" onclick="mayor()">Mayor Nota</button>
-        <button class="botones" onclick="aplazado()">Aplazados</button>
+        <div>
+            <h3 class="funcionesTitulo">Promedio: <span id="promedio"></span></h3>
+            <button class="botones" onclick="promedio()">Promedio</button>
+        </div>
+
+        <div>
+            <h3 class="funcionesTitulo">Nota más alta: <span id="notaAlta"></span></h3>
+            <button class="botones" onclick="mayor()">Mayor Nota</button>
+        </div>
+
+        <div>
+            <h3 class="funcionesTitulo">Aplazados: <span id="aplazado"></span></h3>
+            <button class="botones" onclick="aplazado()">Aplazados</button>
+        </div>
     </main>
 
     <script src="script.js"></script>
