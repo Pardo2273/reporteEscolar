@@ -1,0 +1,1 @@
+//brindar las 4 funciones de los botones
